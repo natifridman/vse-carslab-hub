@@ -8,7 +8,7 @@ spec:
   generators:
     - git:
         repoURL: https://github.com/natifridman/vse-carslab-hub
-        revision: main
+        revision: cars-lab
         directories:
           - path: core/*
   template:
@@ -28,7 +28,7 @@ spec:
             maxDuration: 5m
       source:
         repoURL: https://github.com/natifridman/vse-carslab-hub
-        targetRevision: main
+        targetRevision: cars-lab
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
