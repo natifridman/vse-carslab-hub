@@ -118,12 +118,6 @@ spec:
       kinds:
       - TaskRun
       - PipelineRun
-    - apiGroups:
-      - metal3.io/v1alpha1
-      clusters:
-      - '*'
-      kinds:
-      - Provisioning
   server:
     autoscale:
       enabled: false
