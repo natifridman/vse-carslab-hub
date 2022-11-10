@@ -118,6 +118,7 @@ spec:
       kinds:
       - TaskRun
       - PipelineRun
+      - Provisioning
   server:
     autoscale:
       enabled: false
