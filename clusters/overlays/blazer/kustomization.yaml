@@ -31,10 +31,8 @@ patches:
         value: 'blazer-cars-lab'
   - target:
       kind: SealedSecret
-    patch: |-
-      - op: replace
-        path: /spec/template/metadata/namespace
-        value: 'blazer-cars-lab'
+      name: assisted-deployment-pull-secret
+    path: ./patches/pullsecret-sealed-patch.yaml
   - target:
       kind: Secret
       name: bmc-super1
