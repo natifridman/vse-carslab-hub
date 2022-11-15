@@ -1,6 +1,7 @@
 ---
 apiVersion: internal.open-cluster-management.io/v1beta1
 kind: ManagedClusterInfo
+# yamllint disable rule:line-length
 metadata:
   # This object is created by RHACM and it is created with a app.kubernetes.io/instance label attached to it.
   # RHACM adds this label to the ManagedClusterInfo object likely because a parent object was labeled using
@@ -13,3 +14,4 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "9"
   namespace: blazer-cars-lab
+# yamllint enable rule:line-length
