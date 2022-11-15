@@ -5,8 +5,9 @@ kind: Kustomization
 namespace: blazer-cars-lab
 # namePrefix: blazer-cars-lab-
 
-bases:
+resources:
   - github.com/redhat-partner-solutions/vse-ocp-bases/base/3-node?ref=main
+  - ./patches/managed-cluster-info.yaml
 
 patchesStrategicMerge:
   - ./patches/nmstate-config.yaml
