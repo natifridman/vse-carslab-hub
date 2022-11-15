@@ -4,7 +4,7 @@ All cluster lifecycle is managed by Argo CD, including Argo configuration itself
 
 ## How to run it
 ```shell
-until oc apply -k https://github.com/natifridman/vse-carslab-hub/bootstrap/overlays/default; do sleep 3; done
+until oc apply -k https://github.com/natifridman/vse-carslab-hub/bootstrap/overlays/default?ref=cars-lab; do sleep 3; done
 ```
 
 # Structure
