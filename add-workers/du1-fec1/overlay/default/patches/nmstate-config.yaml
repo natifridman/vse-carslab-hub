@@ -14,28 +14,28 @@ spec:
       - name: eno2
         type: ethernet
         state: down
-      - name: eno3
+      - name: ens2f0
         type: ethernet
         state: up
         ipv4:
           address:
-            - ip: 172.17.0.184
+            - ip: 172.18.0.151
               prefix-length: 24
           enabled: true
         ipv6:
           enabled: true
           address:
-            - ip: fd00:6:6:2060::184
+            - ip: fd00:6:6:2061::151
               prefix-length: 64
           autoconf: false
           dhcp: false
-      - name: eno4
+      - name: ens2f1
         type: ethernet
         state: down
-      - name: enp25s0f0
+      - name: ens1f0
         type: ethernet
         state: down
-      - name: enp25s0f1
+      - name: ens1f1
         type: ethernet
         state: down
     dns-resolver:
@@ -46,21 +46,21 @@ spec:
     routes:
       config:
         - destination: 0.0.0.0/0
-          next-hop-address: 172.17.0.1
-          next-hop-interface: eno3
+          next-hop-address: 172.18.0.1
+          next-hop-interface: ens2f0
         - destination: ::/0
-          next-hop-address: fd00:6:6:2060::1
-          next-hop-interface: eno3
+          next-hop-address: fd00:6:6:2061::1
+          next-hop-interface: ens2f0
   interfaces:
     - name: eno1
-      macAddress: "3c:ec:ef:30:71:8e"
+      macAddress: "3c:ec:ef:1d:a0:ee"
     - name: eno2
-      macAddress: "3c:ec:ef:30:71:8f"
-    - name: eno3
-      macAddress: "3c:ec:ef:2d:7f:b2"
-    - name: eno4
-      macAddress: "3c:ec:ef:2d:7f:b3"
-    - name: enp25s0f0
-      macAddress: "3c:ec:ef:2d:7f:b0"
-    - name: enp25s0f1
-      macAddress: "3c:ec:ef:2d:7f:b1"
+      macAddress: "3c:ec:ef:1d:a0:ef"
+    - name: ens1f0
+      macAddress: "50:7c:6f:01:65:80"
+    - name: ens1f1
+      macAddress: "50:7c:6f:01:65:81"
+    - name: ens2f0
+      macAddress: "ac:1f:6b:e1:80:86"
+    - name: ens2f1
+      macAddress: "ac:1f:6b:e1:80:87"
