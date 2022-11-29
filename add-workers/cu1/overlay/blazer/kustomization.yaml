@@ -22,6 +22,9 @@ patches:
       - op: replace
         path: /metadata/name
         value: 'bmc-cu1-blazer-cars-lab'
+      - op: replace
+        path: /data/username
+        value: 'cm9vdAo='
   - target:
       kind: BareMetalHost
       name: bmh-day2-worker1
