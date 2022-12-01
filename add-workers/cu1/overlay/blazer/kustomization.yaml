@@ -27,7 +27,7 @@ patches:
         value: 'cm9vdAo='
       - op: replace
         path: /data/password
-        value: 'cm9vdAo='
+        value: 'YWx0aW9zdGFyMTIzCg=='
   - target:
       kind: BareMetalHost
       name: bmh-day2-worker1
