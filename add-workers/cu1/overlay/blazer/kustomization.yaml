@@ -25,6 +25,9 @@ patches:
       - op: replace
         path: /data/username
         value: 'cm9vdAo='
+      - op: replace
+        path: /data/password
+        value: 'cm9vdAo='
   - target:
       kind: BareMetalHost
       name: bmh-day2-worker1
@@ -41,4 +44,4 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/labels/cluster-name
-        value: 'blazer-cars-lab'
+        value: 'blazer-nmstate'
