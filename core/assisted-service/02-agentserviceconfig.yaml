@@ -24,13 +24,15 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
 spec:
   databaseStorage:
-    # storageClassName: lso-filesystemclass
+    # bug, leave default class for now
+    # storageClassName: lso-blockclass
     accessModes:
       - ReadWriteOnce
     resources:
       requests:
         storage: 20Gi
   filesystemStorage:
+    # bug, leave default class for now
     # storageClassName: lso-filesystemclass
     accessModes:
       - ReadWriteOnce
