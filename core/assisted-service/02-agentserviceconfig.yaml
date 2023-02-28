@@ -25,7 +25,8 @@ metadata:
 spec:
   databaseStorage:
     # bug, leave default class for now
-    storageClassName: lso-blockclass
+    # storageClassName: lso-blockclass
+    storageClassName: lso-filesystemclass
     accessModes:
       - ReadWriteOnce
     resources:
