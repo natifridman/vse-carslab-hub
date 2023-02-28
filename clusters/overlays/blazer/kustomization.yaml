@@ -11,9 +11,11 @@ resources:
 
 patchesStrategicMerge:
   - ./patches/nmstate-config.yaml
-  - ./patches/aci.yaml
+  #- ./patches/aci.yaml
 
 patches:
+  #- path: ./patches/nmstate-config.yaml
+  - path: ./patches/aci.yaml
   - target:
       version: v1
       kind: Namespace
