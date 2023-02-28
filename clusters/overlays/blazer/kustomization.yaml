@@ -7,7 +7,6 @@ namespace: blazer-cars-lab
 
 resources:
   - github.com/redhat-partner-solutions/vse-ocp-bases/base/3-node?ref=main
-  - ./patches/managed-cluster-info.yaml
 
 patchesStrategicMerge:
   - ./patches/nmstate-config.yaml
@@ -62,6 +61,15 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/name
+        value: 'blazer-cars-lab'
+  - target:
+      kind: ManagedClusterInfo
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: 'blazer-cars-lab'
+      - op: replace
+        path: /metadata/namespace
         value: 'blazer-cars-lab'
   - target:
       kind: BareMetalHost
