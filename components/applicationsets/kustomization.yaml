@@ -8,4 +8,3 @@ resources:
   - worker-nodes-appset.yaml
   # - ztp-clusters-appset.yaml
   # - ztp-policies-appset.yaml
-
