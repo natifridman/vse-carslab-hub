@@ -2,11 +2,11 @@
 apiVersion: ran.openshift.io/v1
 kind: PolicyGenTemplate
 metadata:
-  name: "skidoo"
+  name: "glodwing"
   namespace: "ztp-site"
 spec:
   bindingRules:
-    name: "skidoo"
+    name: "glodwing"
   mcp: "master"
   remediationAction: enforce
   sourceFiles:
