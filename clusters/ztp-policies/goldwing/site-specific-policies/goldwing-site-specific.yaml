@@ -2,11 +2,11 @@
 apiVersion: ran.openshift.io/v1
 kind: PolicyGenTemplate
 metadata:
-  name: "glodwing-site-specific"
+  name: "goldwing-site-specific"
   namespace: "ztp-site"
 spec:
   bindingRules:
-    sites: "glodwing"
+    sites: "goldwing"
   remediationAction: inform
   mcp: "master"
   sourceFiles:
