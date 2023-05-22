@@ -18,10 +18,10 @@ spec:
         additionalKernelArgs:
           - rcupdate.rcu_normal_after_boot=0
           - nohz=off
-          - nohz_full=4-47,52-95
+          - nohz_full=2-31, 34-63
         cpu:
-          isolated: "4-47,52-95"
-          reserved: "0-3,48-51"
+          isolated: "2-31, 34-63"
+          reserved: "0-1,32-33"
         hugepages:
           defaultHugepagesSize: "1G"
           pages:
@@ -46,7 +46,7 @@ spec:
               summary=Configuration changes profile inherited from performance
               include=openshift-node-performance-openshift-node-performance-profile
               [bootloader]
-              cmdline_crash=nohz_full=4-47,52-95
+              cmdline_crash=nohz_full=2-31, 34-63
               [sysctl]
               kernel.timer_migration=1
               [scheduler]
