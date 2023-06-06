@@ -10,7 +10,7 @@ spec:
   clusterDeploymentRef:
     name: blazer-cars-lab
   imageSetRef:
-    name: img4.10.16
+    name: img4.11.9-x86-64-appsub
   networking:
     clusterNetwork:
       - cidr: 10.128.0.0/14

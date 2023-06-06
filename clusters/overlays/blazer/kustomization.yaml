@@ -5,14 +5,16 @@ kind: Kustomization
 namespace: blazer-cars-lab
 # namePrefix: blazer-cars-lab-
 
-bases:
+resources:
   - github.com/redhat-partner-solutions/vse-ocp-bases/base/3-node?ref=main
 
 patchesStrategicMerge:
   - ./patches/nmstate-config.yaml
-  - ./patches/aci.yaml
+  #- ./patches/aci.yaml
 
 patches:
+  #- path: ./patches/nmstate-config.yaml
+  - path: ./patches/aci.yaml
   - target:
       version: v1
       kind: Namespace
@@ -31,10 +33,8 @@ patches:
         value: 'blazer-cars-lab'
   - target:
       kind: SealedSecret
-    patch: |-
-      - op: replace
-        path: /spec/template/metadata/namespace
-        value: 'blazer-cars-lab'
+      name: assisted-deployment-pull-secret
+    path: ./patches/pullsecret-sealed-patch.yaml
   - target:
       kind: Secret
       name: bmc-super1
@@ -61,6 +61,15 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/name
+        value: 'blazer-cars-lab'
+  - target:
+      kind: ManagedClusterInfo
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: 'blazer-cars-lab'
+      - op: replace
+        path: /metadata/namespace
         value: 'blazer-cars-lab'
   - target:
       kind: BareMetalHost
