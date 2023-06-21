@@ -76,3 +76,10 @@ spec:
       url: https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.12/4.12.3/rhcos-4.12.3-x86_64-live.x86_64.iso
       rootFSUrl: https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.12/4.12.3/rhcos-4.12.3-x86_64-live-rootfs.x86_64.img
       # yamllint enable rule:line-length
+    - openshiftVersion: "4.14"
+      cpuArchitecture: x86_64
+      version: "413.92.202303281804-0"
+      # yamllint disable rule:line-length
+      url: https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/pre-release/4.13.0-rc.2/rhcos-4.13.0-rc.2-x86_64-live.x86_64.iso
+      rootFSUrl: https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/pre-release/4.13.0-rc.2/rhcos-4.13.0-rc.2-x86_64-live-rootfs.x86_64.img
+      # yamllint enable rule:line-length
